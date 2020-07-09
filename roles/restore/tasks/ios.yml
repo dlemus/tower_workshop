@@ -3,7 +3,7 @@
 
 - name: validate
   ios_config:
-    - no banner login
+    lines: no banner login
     
 - name: restore the config
   ios_config:
