@@ -4,6 +4,7 @@
 - name: restore the config
   ios_config:
     src: "/backup/{{rollback_date}}/{{inventory_hostname}}"
+    parents: interface GigabitEthernet1
 
           
 - name: print to terminal window
