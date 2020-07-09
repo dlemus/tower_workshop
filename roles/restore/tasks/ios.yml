@@ -7,12 +7,12 @@
 
 - name: COPY RUNNING CONFIG TO ROUTER
   net_put:
-    src: /backup/{{rollback_date}}/{{inventory_hostname}}
+    src: "/backup/{{rollback_date}}/{{inventory_hostname}}"
 
 - name: CONFIG REPLACE
   ios_command:
     commands:
-      - config replace flash:{{inventory_hostname}}.config force
+      - config replace flash:{{inventory_hostname}} force
           
 - name: print to terminal window
   debug:
