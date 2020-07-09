@@ -1,15 +1,15 @@
 - debug:
     msg: "restoring from /backup/{{rollback_date}}/{{inventory_hostname}}"
 
-- name: restore the config
-  ios_config:
-    src: "/backup/{{rollback_date}}/{{inventory_hostname}}"
-
 - name: validate
   ios_banner:
     banner: login
     text: ""
     state: present
+    
+- name: restore the config
+  ios_config:
+    src: "/backup/{{rollback_date}}/{{inventory_hostname}}"
     
 - name: print to terminal window
   debug:
