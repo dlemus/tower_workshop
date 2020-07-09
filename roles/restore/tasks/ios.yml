@@ -4,8 +4,6 @@
 - name: restore the config
   ios_config:
     src: "/backup/{{rollback_date}}/{{inventory_hostname}}"
-    authorize: yes
-    replace: block
     
 - name: print to terminal window
   debug:
