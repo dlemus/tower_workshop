@@ -8,7 +8,6 @@
 - name: COPY RUNNING CONFIG TO ROUTER
   net_put:
     src: /backup/{{rollback_date}}/{{inventory_hostname}}
-    dest: flash:{{inventory_hostname}}.config
 
 - name: CONFIG REPLACE
   ios_command:
