@@ -1,9 +1,7 @@
 # This task will backup the configuration
 - name: BACKUP THE CONFIG
   ios_config:
-    backup: yes
-    defaults: no
-    
+    backup: yes    
   register: config_output
 
 # This task removes the Current configuration... from the top of IOS routers show run
