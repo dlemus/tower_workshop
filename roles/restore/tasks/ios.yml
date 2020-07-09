@@ -4,7 +4,7 @@
 - name: validate
   ios_banner:
     banner: login
-    text: ""
+    text: " "
     state: present
     
 - name: restore the config
